@@ -1,0 +1,9 @@
+clean_pe_contratos: {
+	description: clean table from br_gov_despesas_municipais_tce_pe_contratos.contratos and add analise_corrupcao_cluster.tce_pe_contratos_cleaned
+	code: database_analysis/pe_contratos.ipynb
+	dependency: False
+	query: |
+	CREATE TABLE analise_corrupcao_cluster.tce_pe_contratos_cleaned AS (
+	SELECT *
+	FROM clean table from br_gov_despesas_municipais_tce_pe_contratos.contratos)
+}
